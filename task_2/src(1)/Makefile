@@ -5,7 +5,8 @@ BUILD_DIR := target
 TEST_RESULTS_FILE := test_results.txt
 
 
-MODIFIED_FILES := $(shell powershell -Command "git diff --name-only --diff-filter=AM HEAD~1 | Select-String '\.java' | Where-Object {$_ -notmatch 'Test.java'}")
+MODIFIED_FILES := $(shell git diff --name-only --diff-filter=AM HEAD~1 | findstr /R "\.java" | findstr /V "Test.java")
+
 
 
 TEST_CLASSES := $(MODIFIED_FILES:.java=Test)
