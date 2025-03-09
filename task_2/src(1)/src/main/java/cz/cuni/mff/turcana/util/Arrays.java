@@ -11,7 +11,7 @@ public class Arrays {
         int[] sortedarr = pool.invoke(new ParallelMergeSort(arr));
 
         System.arraycopy(sortedarr,0,arr,0,sortedarr.length);
-        System.out.println("aa");
+
     }
 
 

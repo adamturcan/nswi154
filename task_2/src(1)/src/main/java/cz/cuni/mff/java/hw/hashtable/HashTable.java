@@ -42,7 +42,6 @@ public class HashTable implements  Iterable<String>{
             table[i] = new LinkedList<>();
 
         }
-        System.out.println("aaaaaa");
         size = 0;
 
     }
