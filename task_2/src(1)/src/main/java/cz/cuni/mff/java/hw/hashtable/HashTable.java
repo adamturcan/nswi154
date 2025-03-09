@@ -104,7 +104,7 @@ public class HashTable implements  Iterable<String>{
             if (entry.key.equals(key)) {
 
                 entry.value = value;
-
+                System.out.println("test");
                 return;
 
             }
